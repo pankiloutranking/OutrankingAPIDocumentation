@@ -2,6 +2,15 @@
 
 For all api, need to put apiKey in header like `{ apiKey : xxxxxxxxxxxxx }`
 
+To obtain an apiKey, please login to your Outranking account
+
+**
+Go to:
+1. Settings
+2. API Key
+3. Copy the API key from there
+**
+
 Rest Api URL : https://apps.outranking.io/api
 
 ## Get user details
@@ -156,6 +165,7 @@ Gets the list of documents in your account
 ```
 
 ## Get document detail by id
+Gets details of the documents based on the given Id.
 
 ### Request
 
@@ -196,6 +206,7 @@ Gets the list of documents in your account
 ```
 
 ## Update document by Id
+Update the document by passing the content and saving directly into the document on Outranking
 
 ### Request
 
@@ -236,7 +247,8 @@ Gets the list of documents in your account
 ```
 
 ## Update document content by Id
-
+Update the document by passing the content and saving directly into the document on Outranking
+**Data is score of content.
 ### Request
 
 `POST /document/content/{id}`
@@ -255,10 +267,11 @@ Gets the list of documents in your account
     "data": 10
 }
 ```
-Data is score of content.
 
 ## 	Create document
-
+Create a new document by using Keyword, Location and Language
+**Location code can be found in the Location JSON file or at the end points towards the end of this document.
+**Standard prefix for language (Supports 13 languages)
 ### Request
 
 `POST /document`
@@ -302,7 +315,7 @@ Data is score of content.
 ```
 
 ## 	Create document share link
-
+**Creates a sharable link that can be saved and used to access the document on Outranking without loging in to the system. 
 ### Request
 
 `POST /documentShare/`
@@ -417,7 +430,7 @@ Data is score of content.
 ```
 
 ## 	Search locations by keyword
-
+**Use this endpoints to search for location codes. Alternativly Json with all location code is available per request. 
 ### Request
 
 `GET /locations/`
