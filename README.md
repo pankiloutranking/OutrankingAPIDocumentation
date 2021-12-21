@@ -5,6 +5,7 @@ For all api, need to put apiKey in header like `{ apiKey : xxxxxxxxxxxxx }`
 Rest Api URL : https://apps.outranking.io/api
 
 ## Get user details
+Connect to your account and get your user details. 
 ### Request
 
 `GET /user/`
@@ -45,8 +46,8 @@ Rest Api URL : https://apps.outranking.io/api
     }
 }
 ```
-## Get Documents
-
+## 1. Get Documents 
+Gets the list of documents in your account
 ### Request
 
 `GET /documents/`
